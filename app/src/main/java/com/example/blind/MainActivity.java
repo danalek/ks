@@ -51,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
         cameraExecutor = Executors.newSingleThreadExecutor();
 
         captureButton.setOnClickListener(view -> takePhoto());
+        results.setOnClickListener(view -> result());
+    }
+    public void result()
+    {
+        startActivity(new Intent(this, MainActivity2.class));
     }
 
     private boolean allPermissionsGranted() {
